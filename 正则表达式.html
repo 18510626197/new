@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      //  var p1 = /规则/修饰符
+      //  修饰符: i,g,m i是忽略大小写，g是全局匹配
+      //  str.search str.replace  p1.test(str)
+      var p1 = /ab/ig;
+      var str1 = "hello abworld bistu AB";
+      var index = str1.search(p1);
+      console.log(index);
+      var str2 = str1.replace(p1,"----");
+      console.log(str2);
+      console.log(p1.test(str1));
+      // var p1 = /^a$/ ^代表以什么开头，$代表以什么结尾。
+       var p2 = /[1234]/;//[]表示匹配的时候有里面任何一个元素就行
+        console.log(p2.test(123));
+       // var p3 = /\d/; //\d代表0-9;
+        var p6 = /^[1-9]\d*$/; //正整数  "*"表示它前面的字符可以有0个或者多个
+        console.log(p6.test(0));
+        console.log(p6.test(190));
+        console.log(p6.test(-1));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
